@@ -53,10 +53,10 @@ const ItemDetails : React.FC = () => {
 
     function getReadyPercent() : String {
         if( todos[index].list.length == 0){
-            return '100%'
+            return ''
         }else{
             let checkedTodos = todos[index].list.filter( item => item.finished)
-            return `${Math.floor(( checkedTodos.length / todos[index].list.length ) * 100)}%`
+            return `${Math.floor(( checkedTodos.length / todos[index].list.length ) * 100)}% concluído`
         }
     }
 
@@ -65,7 +65,7 @@ const ItemDetails : React.FC = () => {
             <Header title={'Detalhe do item'} onPress={ openPrompt }  />
             <ContainerTitle>
                 <Title>{ titulo }</Title>
-                <Porcentagem>{ getReadyPercent() } concluído</Porcentagem>
+                <Porcentagem>{ getReadyPercent() }</Porcentagem>
             </ContainerTitle>
             <FlatList 
                 ListEmptyComponent={<EmptyList />}
