@@ -7,6 +7,7 @@ import useTodo from '../../Context/Todo'
 import { FlatList } from 'react-native'
 import TodoItem from '../../Components/TodoItem'
 import Header from '../../Components/Header'
+import EmptyList from '../../Components/EmptyList'
 
 const TodoList : React.FC = () => {
 
@@ -39,6 +40,7 @@ const TodoList : React.FC = () => {
             <Header title='To-do App' onPress={ openPrompt } />
             <Title>Listagem de To-Do's:</Title>
             <FlatList
+                ListEmptyComponent={<EmptyList/>}
                 renderItem={({ item, index }) => <TodoItem titulo={ item.title } list={item.list} index={ index } />}
                 data={ todos }
                 keyExtractor={( item, index ) => String(index)}

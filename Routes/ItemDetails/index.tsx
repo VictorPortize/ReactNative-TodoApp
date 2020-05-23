@@ -8,6 +8,7 @@ import useTodo from '../../Context/Todo'
 import TodoListItem from '../../Components/TodoListItem'
 import { FlatList } from 'react-native'
 import Header from '../../Components/Header'
+import EmptyList from '../../Components/EmptyList'
 
 type RouteParams = {
     ItemDetails : {
@@ -67,6 +68,7 @@ const ItemDetails : React.FC = () => {
                 <Porcentagem>{ getReadyPercent() } concluído</Porcentagem>
             </ContainerTitle>
             <FlatList 
+                ListEmptyComponent={<EmptyList />}
                 data={ todos[index].list }
                 renderItem={({ item, index }) => (
                 <TodoListItem
