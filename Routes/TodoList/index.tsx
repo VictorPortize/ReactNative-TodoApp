@@ -25,7 +25,7 @@ const TodoList : React.FC = () => {
             'Novo To Do',
             'Digite o título do novo To Do',
             [
-             {text: 'Cancelar', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+             {text: 'Cancelar', onPress: () => {}, style: 'cancel'},
              {text: 'Adicionar', onPress: ( text ) => addNewTodo(text) },
             ],
             {

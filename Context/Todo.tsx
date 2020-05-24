@@ -30,7 +30,6 @@ export const TodoProvider : React.FC = ({ children }) => {
         getTodos()
     },[])
 
-
     async function saveTodos( Todos : Array<Todo> ){
         setTodos(Todos)
         await AsyncStorage.setItem('ToDosApp',JSON.stringify(Todos))
@@ -51,10 +50,9 @@ export const TodoProvider : React.FC = ({ children }) => {
 
     function deleteTodo( indexTodo : number ){
         let allTodos = [...todos]
-        allTodos.splice(indexTodo)
+        allTodos.splice(indexTodo,1)
         saveTodos(allTodos)
     }
-
 
     function addTask( index : number, task : String ){
         let allTodos = [...todos]

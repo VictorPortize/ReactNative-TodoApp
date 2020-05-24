@@ -7,6 +7,7 @@ export const Container = styled.View`
     justify-content : space-between;
     padding-left : 20px;
     border-bottom-width : ${ StyleSheet.hairlineWidth }px;
+    background-color : #28847e;
 `;
 
 export const ContainerBack = styled.View`

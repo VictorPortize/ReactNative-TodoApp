@@ -6,21 +6,21 @@ const { height, width } = Dimensions.get(`window`)
 export const Container = styled.View`
     width : 85%;
     border-width : 1px;
-    border-color : white;
+    border-color : #28847e;
     align-self : center;
     padding : 8px 15px;
-    margin-top : 50px;
+    border-radius : 10px;
 `;
 
 export const Title = styled.Text`
-    color : white;
+    color : #28847e;
     font-size : 20px;
     font-weight : bold;
     align-self : center;
 `
 
 export const SubTitle = styled.Text`
-    color : white;
+    color : #28847e;
     font-size : 12px;
     text-align : center;
 `
