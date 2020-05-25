@@ -72,7 +72,7 @@ export const TodoProvider : React.FC = ({ children }) => {
 
     function deleteTask( indexTodo : number, indexItem : number ){
         let allTodos = [...todos]
-        allTodos[indexTodo].list.splice(indexItem)
+        allTodos[indexTodo].list.splice(indexItem,1)
         saveTodos(allTodos)
     }
 
